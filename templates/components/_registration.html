@@ -1,0 +1,39 @@
+<div class="registration container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="registration row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 mb-3">Registration Form</h1>
+            <p class="col-lg-10 fs-4">If you do not have an account in this site, fill the registration form in
+                order to register.</p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+            <form class="register-form p-4 p-md-5 border rounded-3" method="post" style="background-color: #c785af;"
+                  action="{% url 'register' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group mb-1">
+                    {{ registration_form.first_name }}
+                </div>
+                <div class="form-group mb-1">
+                    {{ registration_form.last_name }}
+                </div>
+                <div class="form-group mb-1">
+                    {{ registration_form.username }}
+                </div>
+                <div class="form-group mb-1">
+                    {{ registration_form.email }}
+                </div>
+                     <div class="form-group mb-1">
+                    {{ registration_form.photo }}
+                </div>
+                <div class="form-group mb-1">
+                    {{ registration_form.password1 }}
+                </div>
+                <div class="form-group mb-1">
+                    {{ registration_form.password2 }}
+                </div>
+                <div class="registration d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

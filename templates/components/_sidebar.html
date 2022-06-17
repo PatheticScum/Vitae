@@ -1,0 +1,10 @@
+<div>
+
+<div class="list-group">
+    {% for category in categories %}
+    <a href="{{ category.get_absolute_url }}" class="list-group-item mb-1 list-group-item-action"
+       style="background-color: #80C4DE;" >
+        {{ category.title }}</a>
+    {% endfor %}
+</div>
+</div>

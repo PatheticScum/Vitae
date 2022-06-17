@@ -1,0 +1,22 @@
+{% load static %}
+<div class="container mt-3">
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="card p-5 py-5" style="background-color: #95E1AD">
+                <div class="text-center"><img src="{% static 'blog/img/Project Akali.jpg' %}" width="70" height="60"
+                                              class="rounded-circle"></div>
+                <div class="text-center mt-3">
+                    <h5 class="mt-2 mb-0">Sherzod Razzaqov</h5> <span>Python Developer</span>
+                    <div class="px-4 mt-1">
+                        <i>Razzaqov Sherzod. Born in 2004. Currently, Student. Python Junior Developer. </i>
+                    </div>
+
+                    <div class="buttons mt-5">
+                        <a class="btn btn-outline-light btn-lg px-4" style="background-color: #05F0EA;"
+                           href="{% url 'send_comment' %}">Email me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

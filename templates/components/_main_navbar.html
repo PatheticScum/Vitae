@@ -1,0 +1,36 @@
+{% load static %}
+
+
+<div class="collapse" id="navbarHeader" style="background-color: #7D31BF;">
+
+</div>
+<div class="navbar shadow-sm" style="background-color: #FDFEFE;">
+    <div class="container-fluid">
+        {% if request.user.is_authenticated %}
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'blog/img/Vitae code.png' %}" width="125" height="60" alt="">
+        </a>
+        {% else %}
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'blog/img/Code.png' %}" width="120" height="65" alt="">
+        </a>
+        {% endif %}
+
+
+        <div class="btn-group dropstart">
+            <button type="button" class="btn dropdown" data-bs-toggle="dropdown">
+
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static 'blog/img/account.gif' %}" width="55" height=55 alt="">
+                </a>
+
+            </button>
+            <div class="dropdown-menu">
+                <a href="{% url 'profile' %}" class="dropdown-item">Profile</a>
+                <a href="{% url 'user_form' %}" class="dropdown-item">Registration</a>
+            </div>
+        </div>
+
+
+    </div>
+</div>

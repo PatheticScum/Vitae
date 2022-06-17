@@ -1,0 +1,24 @@
+<div class="login container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="login row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 mb-3">Logging in Form</h1>
+            <p class="col-lg-10 fs-4">If you have an account in this site log in to use this site via that
+                account.</p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+            <form class="login-form p-4 p-md-5 border rounded-3" method="post" style="background-color: #6cb7b5;"
+                  action="{% url 'login' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group mt-1">
+                    {{ login_form.username }}
+                </div>
+                <div class="form-group mt-1">
+                    {{ login_form.password }}
+                </div>
+                <div class="login d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Log in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
